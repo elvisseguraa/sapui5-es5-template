@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="com.esegura.pe.demo.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+>
+    <Page>
+        <content>
+            <Panel
+                id="panelProducts"
+                expandable="true"
+                expanded="true"
+                width="auto"
+                class="sapUiResponsiveMargin"
+            >
+                <content>
+                    <Table
+                        items="{oDataProducts>/}"
+                        inset="false"
+                        growing="true"
+                    >
+                        <columns>
+                            <Column>
+                                <Text text="Name" />
+                            </Column>
+                            <Column>
+                                <Text text="Description" />
+                            </Column>
+                            <Column>
+                                <Text text="Price" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{oDataProducts>Name}" />
+                                    <Text text="{oDataProducts>Description}" />
+                                    <Text text="{oDataProducts>Price}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
