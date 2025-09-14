@@ -9,10 +9,10 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend("com.esegura.pe.demo.controller.Main", {
-      onInit: function () {
-        // this.listProducts();
-      },
       
+      onInit: function () {
+        this.listProducts();
+      },  
 
       listProducts: function () {
         const oService = this.getOwnerComponent().getModel("oDataService");
